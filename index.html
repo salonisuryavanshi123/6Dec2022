@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Data Types</title>
+        <style>
+            ul.myul{
+                list-style: none;
+            }
+        </style>
+
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h1>Javascript Data Types</h1>
+        <ul class="myul">
+            <li>String ""/''/``</li>
+            <li>Number 1,2,3,4,5</li>
+            <li>Object {}</li>
+        </ul>
+
+        <p id="news1"></p>
+        <p data-news2="news2"></p>
+        <p id="line1"></p>
+        <span data-line2="line2"></span>
+        <p id="line3"></p>
+
+        <script>
+            // Multi Line comment
+            /*
+            
+            The encounter took place near Supkhar-Motinala near MP’s Mandla and Balaghat, and Chhattisgarh border. The deceased are said to be members of the Kanha Bhoram Dev Committee.
+            */
+
+            const news1 = {
+                //Property:Value
+                w1:"The",  //String
+                w2:`encounter`,
+                w3:"took",
+                w4:'place',
+                w5:"near",
+                w6:'Supkhar-',
+                w7:`Motinala`,
+                w8:"near",
+                w9:"MP's",
+                w10:'Mandla',
+                w11:`and`,
+                w12:"Balaghat,",
+                w13:'and',
+                w14:`Chhattisgarh`,
+                w15:"border"
+            };
+            var news2 = {
+                //Property:Value
+                w1:"The",
+                w2:'BJP',
+                w3:`set`,
+                w4:"to",
+                w5:'retain',
+                w6:`power`,
+                w7:"in",
+                w8:"Himachal"
+            };
+            const line1 = {
+                //Property:Value
+                w1:"It`s",
+                w2:'alright'
+            };
+            var line2 = {
+                //Property:Value
+                w1:'He',
+                w2:"is",
+                w3:`called`,
+                w4:"'Johnny'"
+            }; 
+            let line3 = {
+                //Property:Value
+                w1:"He",
+                w2:'is',
+                w3:"called",
+                w4:'"Johnny"'
+            };
+
+            //There are four ways to display the output
+
+            //Value  object.property
+            let n1 = news1.w1+' '+news1.w2+" "+news1.w3+` `+news1.w4+" "+news1.w5+' '+news1.w6+``+news1.w7+" "+news1.w8+' '+news1.w9+` `+news1.w10+" "+news1.w11+' '+news1.w12+" "+news1.w13+` `+news1.w14+' '+news1.w15;
+            console.log(n1);
+
+            var x = document.getElementById("news1");
+            x.innerHTML = 'Hello';
+            x.style.color = 'blue';
+            x.innerHTML = n1; 
+
+
+            const n2 = news2.w1+' '+news2.w2+" "+news2.w3+` `+news2.w4+" "+news2.w5+' '+news2.w6+``+news2.w7+" "+news2.w8;
+            console.log(n2);
+
+            let y = document.querySelector('p[data-news2="news2"]');
+            y.innerHTML = n2;
+            y.style.color = "red";
+
+            //Value  Object.property
+            const n3 = line1.w1+" "+line1.w2;
+            console.log(n3);
+            document.getElementById("line1").innerHTML = n3;
+
+            let n4 = line2.w1+" "+line2.w2+' '+line2.w3+` `+line2.w4;
+            console.log(n4);
+            document.querySelector("span[data-line2='line2']").innerHTML = n4;
+
+            const n5 = line3.w1+" "+line3.w2+' '+line3.w3+` `+line3.w4;
+            console.log(n5);
+            document.getElementById('line3').innerHTML = n5;
+            
+            
+
+        </script>
+    </body>
+</html>
